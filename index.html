@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f8eef6">
+<title>Thalia Lages Nails | Agendamento</title>
+<style>
+:root{--ink:#34233b;--plum:#67416f;--purple:#8d6494;--pink:#f2dce9;--rose:#f8edf4;--gold:#c5a15a;--paper:#fffafd;--muted:#806f82;--line:#eadce9;--green:#39795d;--red:#a64e5a}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#f8eef6,#fffafd 45%,#f7edf4);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:760px;margin:auto;padding:16px 14px 44px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 2px 16px}.brand{display:flex;align-items:center;gap:10px}.monogram{width:46px;height:46px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--plum);font-family:Georgia,serif;font-size:19px;background:#fff9fd}.brand strong{display:block;font-family:Georgia,serif;font-size:17px;letter-spacing:.3px}.brand small{color:var(--muted);letter-spacing:2px;font-size:9px}.navbtn{border:1px solid var(--line);background:#fff9fd;border-radius:999px;padding:9px 13px;color:var(--plum);font-weight:700;font-size:12px}
+.hero{overflow:hidden;border-radius:25px;background:var(--plum);color:white;box-shadow:0 14px 35px #67416f26}.hero img{width:100%;display:block;max-height:285px;object-fit:cover;object-position:top}.hero-copy{padding:21px 20px 23px;text-align:center;background:linear-gradient(135deg,#68466f,#8b628f)}.eyebrow{font-size:10px;letter-spacing:2.5px;color:#f2dca7;text-transform:uppercase}.hero h1{font:normal clamp(27px,7vw,39px)/1.1 Georgia,serif;margin:8px 0}.hero p{margin:0;color:#f8eefa;font-size:13px}.goldline{height:1px;width:70px;background:var(--gold);margin:14px auto 0}
+.tabs{display:flex;gap:7px;margin:18px 0}.tab{flex:1;border:1px solid var(--line);background:#fff9fd;color:var(--plum);border-radius:13px;padding:12px 8px;font-weight:750;font-size:12px}.tab.active{background:var(--plum);color:white;border-color:var(--plum)}
+.card{background:#fffdfd;border:1px solid var(--line);border-radius:19px;padding:17px;margin:12px 0;box-shadow:0 5px 20px #67416f0b}.section-title{display:flex;align-items:center;gap:9px;margin:0 0 13px;font:normal 22px Georgia,serif}.section-title:after{content:"";height:1px;background:#e7d4e5;flex:1}.hint{font-size:12px;color:var(--muted);margin:-5px 0 13px}.services{display:grid;gap:8px}.service{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:13px;padding:11px;background:#fffafd}.service input{accent-color:var(--plum);width:18px;height:18px;flex:none}.service .name{font-size:13px;font-weight:700;flex:1}.service small{display:block;font-size:10px;color:var(--muted);font-weight:500;margin-top:3px}.price{font-weight:800;color:var(--plum);font-size:13px;white-space:nowrap}.total{display:flex;justify-content:space-between;align-items:center;margin-top:13px;padding:13px;border-radius:13px;background:var(--rose)}.total strong{font-size:19px;color:var(--plum)}.fields{display:grid;grid-template-columns:1fr 1fr;gap:11px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:800;color:var(--plum)}.field input,.field select{border:1px solid var(--line);border-radius:11px;background:#fff;padding:12px;color:var(--ink);min-width:0;width:100%}.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.slot{border:1px solid var(--line);border-radius:10px;padding:10px 3px;background:#fff;color:var(--plum);font-weight:750;font-size:12px}.slot:disabled{opacity:.32;text-decoration:line-through;cursor:not-allowed;background:#f2eef2}.slot.selected{background:var(--plum);color:white;border-color:var(--plum)}.primary{width:100%;border:0;border-radius:13px;background:linear-gradient(100deg,#67416f,#93679a);color:white;padding:15px;font-weight:800;box-shadow:0 7px 18px #67416f28}.note{font-size:11px;color:var(--muted);line-height:1.5}.status{border-radius:12px;padding:11px;background:#f8f0f7;color:var(--plum);font-size:12px;line-height:1.5}.hidden{display:none!important}.appointment{border:1px solid var(--line);border-radius:13px;padding:13px;margin:9px 0;background:#fffafd}.appt-head{display:flex;justify-content:space-between;gap:8px;align-items:center}.pill{font-size:10px;border-radius:999px;padding:5px 8px;font-weight:800;background:#f5e9f2;color:var(--plum)}.pill.ok{background:#e6f3eb;color:var(--green)}.pill.no{background:#f9e9eb;color:var(--red)}.actions{display:flex;gap:7px;margin-top:10px}.actions button{border:1px solid var(--line);background:white;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:750;color:var(--plum)}.actions .approve{background:var(--green);color:white;border-color:var(--green)}.actions .reject{color:var(--red)}.empty{text-align:center;color:var(--muted);padding:25px 10px;font-size:13px}.admin-section{border-top:1px solid var(--line);margin-top:18px;padding-top:17px}.admin-section .section-title{font-size:19px}.admin-section .actions{flex-wrap:wrap}.service-admin{border:1px solid var(--line);border-radius:12px;padding:11px;margin:8px 0;background:#fffafd}.service-admin .actions{margin-top:8px}.service-admin button{border:1px solid var(--line);background:white;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:750;color:var(--plum)}.service-admin button.danger{color:var(--red)}.service-admin .muted{opacity:.55}.footer{text-align:center;color:var(--muted);font-size:11px;padding:18px 8px}.footer a{color:var(--plum);font-weight:800;text-decoration:none}
+@media(max-width:420px){.fields{grid-template-columns:1fr}.slots{grid-template-columns:repeat(3,1fr)}.hero img{max-height:220px}}
+
+/* Organização do painel administrativo */
+.admin-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:16px 0 18px}
+.admin-nav button{border:1px solid var(--line);background:#fff;border-radius:11px;padding:11px 7px;color:var(--plum);font-size:12px;font-weight:750;cursor:pointer}
+.admin-nav button.active{background:var(--plum);border-color:var(--plum);color:#fff}
+.admin-view{margin-top:8px}.admin-view.hidden{display:none!important}
+.admin-filter{display:flex;gap:9px;align-items:end;flex-wrap:wrap;margin:10px 0 14px}
+.admin-filter .field{flex:1;min-width:170px}.admin-filter input{width:100%}
+@media(max-width:520px){.admin-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-nav button{padding:12px 8px}}
+
+/* Acabamento dos controles e destaque de promoções */
+.admin-nav button,.actions button,.admin-filter button,.admin-section button.secondary{
+  border-radius:12px;min-height:40px;padding:10px 14px;font-weight:700;
+  transition:transform .15s ease,filter .15s ease,background .15s ease;
+}
+.admin-nav button:hover,.actions button:hover,.admin-filter button:hover{filter:brightness(.97);transform:translateY(-1px)}
+.admin-nav button.active{box-shadow:0 5px 14px #67416f22}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+/* Ações preservadas no formato flexível original, com quebra natural de linha. */
+.actions button{flex:1 1 auto}
+.actions .whatsapp-link{flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;text-align:center;border:1px solid #cde7d5;border-radius:12px;min-height:40px;padding:10px 14px;background:#e9f7ee;color:#176b3a;font-size:12px;font-weight:750;text-decoration:none;transition:transform .15s ease,filter .15s ease}
+.actions .whatsapp-link:hover{filter:brightness(.97);transform:translateY(-1px)}
+button.secondary,.admin-filter button.secondary{background:#f7eff6;color:var(--plum);border:1px solid #e6d6e5}
+button.approve{background:var(--plum);color:#fff;border:1px solid var(--plum)}
+button.reject,button.danger{background:#fff4f3;color:#9b4d55;border:1px solid #efd4d5}
+button:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.promo-field{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fffafd}
+.promo-field input{width:18px;height:18px;accent-color:var(--plum)}
+.promo-price{color:#a34e62;font-weight:800}
+.promo-tag{display:inline-flex;align-items:center;border-radius:999px;background:#fae9ed;color:#a34e62;padding:3px 8px;font-size:10px;font-weight:800;letter-spacing:.4px}
+.service .price del{display:block;color:var(--muted);font-size:11px;font-weight:500}
+.service .price .promo-price{display:block}
+
+/* Ajustes de navegação e configurações */
+.section-heading{display:flex;align-items:center;gap:10px;justify-content:space-between}
+.section-heading .section-title{flex:1;margin-bottom:13px}
+.refresh-compact{width:38px;height:38px;flex:none;border:1px solid var(--line);border-radius:12px;background:#fff7fc;color:var(--plum);font-size:22px;font-weight:700;line-height:1;box-shadow:0 3px 10px #67416f0d}
+.refresh-compact:hover{background:var(--pink);transform:rotate(25deg)}
+.logout-btn{border:1px solid #e8d5e5;background:#fff7fb;color:#8a526f;border-radius:999px;padding:10px 15px;font-size:12px;font-weight:800;display:inline-flex;align-items:center;gap:7px;box-shadow:0 3px 10px #67416f0c}
+.logout-btn span{font-size:16px}
+.logout-btn:hover{background:#f8eaf2;border-color:#d9bfd3}
+.settings-block{padding:14px;border:1px solid var(--line);border-radius:15px;background:#fffafd;margin:13px 0}
+.settings-block h4{margin:0 0 12px;color:var(--plum);font:700 15px Georgia,serif}
+.lunch-toggle{margin-bottom:5px}
+.lunch-toggle input{flex:none}
+#lunchTimes.disabled{opacity:.45}
+@media(max-width:420px){.section-heading .section-title{font-size:18px}.refresh-compact{width:36px;height:36px}}
+.panel-topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.panel-tools{display:flex;align-items:center;gap:8px}.panel-tools .refresh-compact{width:38px;height:38px}.logout-btn{background:var(--plum);border-color:var(--plum);color:#fff;padding:10px 16px;box-shadow:0 5px 14px #67416f24}.logout-btn:hover{background:#54335c;border-color:#54335c;color:#fff}.logout-btn span{font-size:15px}@media(max-width:420px){.panel-topbar{align-items:flex-start}.panel-tools{margin-left:auto}.logout-btn{padding:9px 13px}}
+
+/* Campo de promoção alinhado ao preço promocional */
+.promo-row{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(170px,.75fr);gap:11px;align-items:end}
+.promo-row .promo-field{height:100%;min-height:48px}
+@media(max-width:520px){.promo-row{grid-template-columns:1fr}}
+</style></head>
+<body><main class="shell">
+<header class="top"><div class="brand"><div class="monogram">TL</div><div><strong>Thalia Lages</strong><small> N A I L S </small></div></div><button class="navbtn" id="insta">Instagram ↗</button></header>
+<section class="hero"><div class="hero-copy"><div class="eyebrow">Beleza em cada detalhe</div><h1>Seu momento de beleza começa aqui.</h1><p>Escolha seus procedimentos e solicite seu horário online.</p><div class="goldline"></div></div></section>
+<div class="tabs"><button class="tab active" data-tab="booking">♡ Agendar horário</button><button class="tab" data-tab="admin">Área da Thalia</button></div>
+<section id="booking">
+<div class="card"><h2 class="section-title">Nossos procedimentos</h2><p class="hint">Você pode selecionar mais de um serviço. O valor e o tempo são calculados automaticamente.</p><div class="services" id="services"></div><div class="total"><span><b id="duration">0 min</b><small style="display:block;color:var(--muted);font-size:10px">Tempo estimado</small></span><strong id="total">R$ 0,00</strong></div></div>
+<div class="card"><h2 class="section-title">Escolha a data e o horário</h2><div class="fields"><div class="field full"><label for="date">DATA DO ATENDIMENTO</label><input id="date" type="date"></div></div><p class="hint" id="scheduleHint" style="margin-top:13px">Consulte os horários disponíveis para a data escolhida.</p><div class="slots" id="slots"></div><p class="note" style="margin-top:10px">Os horários são sugestões de início em intervalos de 30 minutos. O sistema respeita a duração dos serviços e não oferece horários que ultrapassem o expediente ou atravessem o intervalo.</p></div>
+<div class="card"><h2 class="section-title">Seus dados</h2><div class="fields"><div class="field"><label for="customer">SEU NOME</label><input id="customer" placeholder="Nome completo" autocomplete="name"></div><div class="field"><label for="phone">WHATSAPP</label><input id="phone" placeholder="(99) 99999-9999" inputmode="tel" autocomplete="tel"></div></div><p class="note" style="margin:12px 0">A solicitação ficará pendente até a Thalia analisar. O horário só estará confirmado depois da aprovação.</p><button class="primary" id="request">Solicitar agendamento</button><div id="bookingMsg" style="margin-top:10px"></div></div>
+</section>
+<section id="admin" class="hidden">
+<div class="card" id="loginCard"><h2 class="section-title">Acesso da Thalia</h2><p class="hint">Entre com o e-mail e a senha cadastrados no Supabase para visualizar e administrar os agendamentos.</p><div class="fields"><div class="field full"><label for="adminEmail">E-MAIL</label><input id="adminEmail" type="email" autocomplete="username" placeholder="thalia@gmail.com"></div><div class="field full"><label for="adminPassword">SENHA</label><input id="adminPassword" type="password" autocomplete="current-password" placeholder="Sua senha"></div></div><button class="primary" id="loginBtn" style="margin-top:14px">Entrar no painel</button><div id="loginMsg" style="margin-top:10px"></div></div>
+<div class="card hidden" id="agendaCard"><div class="panel-topbar"><h2 class="section-title" style="margin:0">Painel da Thalia</h2><div class="panel-tools"><button class="refresh-compact" id="refreshAdmin" type="button" aria-label="Atualizar painel" title="Atualizar painel">↻</button><button class="logout-btn" id="logoutBtn" type="button"><span aria-hidden="true">↪</span> Sair</button></div></div><div class="status" style="margin-top:12px">Solicitações novas ficam pendentes por 30 minutos. Ao aprovar, o horário fica confirmado. Ao recusar, ele volta a ficar disponível.</div>
+<div class="admin-nav" role="tablist" aria-label="Seções do painel">
+<button type="button" class="active" data-admin-view="agenda">♧ Agenda</button>
+<button type="button" data-admin-view="services">✧ Procedimentos</button>
+<button type="button" data-admin-view="settings">⚙ Configurações</button>
+<button type="button" data-admin-view="history">◷ Histórico</button>
+</div>
+<div id="adminViewSettings" class="admin-view hidden"><div class="admin-section"><h3 class="section-title">Configurações da agenda</h3><p class="hint">Defina o horário de funcionamento, o intervalo entre atendimentos e o horário de almoço. Essas regras serão aplicadas automaticamente aos horários disponíveis no site.</p><div class="settings-block"><h4>Horário de funcionamento</h4><div class="fields"><div class="field"><label for="openingTime">HORÁRIO DE ABERTURA</label><input id="openingTime" type="time" value="08:00" required></div><div class="field"><label for="closingTime">HORÁRIO DE FECHAMENTO</label><input id="closingTime" type="time" value="18:00" required></div></div><p class="note" style="margin:10px 0 0">As clientes só poderão escolher horários dentro desse período.</p></div><div class="settings-block"><h4>Intervalo entre atendimentos</h4><div class="fields"><div class="field full"><label for="intervalMinutes">TEMPO ENTRE UM ATENDIMENTO E OUTRO</label><select id="intervalMinutes"><option value="0">Sem intervalo (0 minuto)</option><option value="5">5 minutos</option><option value="10">10 minutos</option><option value="15">15 minutos</option><option value="20">20 minutos</option><option value="30">30 minutos</option><option value="45">45 minutos</option><option value="60">60 minutos</option></select></div></div></div><div class="settings-block"><h4>Horário de almoço</h4><label class="promo-field lunch-toggle"><input id="lunchEnabled" type="checkbox" checked><span><b>Ativar intervalo de almoço</b><small style="display:block;color:var(--muted);font-weight:400">Desmarque se você for atender direto, sem pausa.</small></span></label><div class="fields" id="lunchTimes" style="margin-top:12px"><div class="field"><label for="lunchStart">INÍCIO DO ALMOÇO</label><input id="lunchStart" type="time" value="12:00"></div><div class="field"><label for="lunchEnd">FIM DO ALMOÇO</label><input id="lunchEnd" type="time" value="14:00"></div></div></div><button class="primary" id="saveSettings" style="margin-top:12px">Salvar configurações</button><div id="settingsMsg" style="margin-top:8px"></div></div></div>
+<div id="adminViewServices" class="admin-view hidden"><div class="admin-section"><h3 class="section-title">Gerenciar procedimentos</h3><p class="hint">A Thalia pode cadastrar serviços, alterar nomes, valores e duração, ou desativar procedimentos que não estiver oferecendo.</p><form id="serviceForm"><input type="hidden" id="serviceId"><div class="fields"><div class="field full"><label for="serviceName">NOME DO PROCEDIMENTO</label><input id="serviceName" required maxlength="100" placeholder="Ex.: Banho de gel"></div><div class="field"><label for="servicePrice">VALOR (R$)</label><input id="servicePrice" type="number" min="0" step="0.01" required placeholder="90,00"></div><div class="field"><label for="serviceDuration">DURAÇÃO (MINUTOS)</label><input id="serviceDuration" type="number" min="15" step="5" required placeholder="90"></div><div class="field full"><label for="serviceDescription">DESCRIÇÃO (OPCIONAL)</label><input id="serviceDescription" maxlength="250" placeholder="Detalhes do procedimento"></div><div class="promo-row"><div class="field"><label class="promo-field"><input id="servicePromo" type="checkbox"><span><b>Colocar este procedimento em promoção</b><small style="display:block;color:var(--muted);font-weight:400">O preço promocional será exibido para as clientes.</small></span></label></div><div class="field"><label for="servicePromoPrice">PREÇO PROMOCIONAL (R$)</label><input id="servicePromoPrice" type="number" min="0" step="0.01" placeholder="Ex.: 75,00"></div></div></div><div class="actions"><button class="approve" type="submit" id="saveService">Salvar procedimento</button><button type="button" id="cancelServiceEdit">Limpar</button></div><div id="serviceMsg" style="margin-top:8px"></div></form><div id="serviceAdminList"></div></div></div>
+<div id="adminViewAgenda" class="admin-view"><div class="admin-section"><h3 class="section-title">Agendamentos de hoje e próximos</h3><div id="stats" style="display:flex;gap:8px;margin:13px 0;flex-wrap:wrap"></div><div id="appointments"></div></div></div>
+<div id="adminViewHistory" class="admin-view hidden"><div class="admin-section"><h3 class="section-title">Histórico de atendimentos</h3><p class="hint">Consulte atendimentos concluídos, cancelados, expirados e clientes que não compareceram.</p><div class="admin-filter"><div class="field"><label for="historyDate">FILTRAR POR DATA (OPCIONAL)</label><input id="historyDate" type="date"></div><button type="button" class="secondary" id="clearHistoryDate">Limpar filtro</button></div><div id="historyStats" style="display:flex;gap:8px;margin:13px 0;flex-wrap:wrap"></div><div id="historyAppointments"></div></div></div></div>
+</section>
+<div class="footer">Thalia Lages Nails · <a href="https://www.instagram.com/thalialages_nails/" target="_blank" rel="noopener">@thalialages_nails</a><br>Agendamentos sujeitos à aprovação.</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+// Configuração pública do projeto. A chave publishable é própria para uso no navegador com RLS ativo.
+const SUPABASE_URL = "https://nmahitedghspwmvbnwpn.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_IxGY9-KJt5ctlX3qA37TLQ_XyG5ii7E";
+const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+const $ = id => document.getElementById(id);
+let catalog = [], adminServices = [], selectedTime = null, adminSession = null, publicSchedule = null;
+const money = n => Number(n || 0).toLocaleString("pt-BR", {style:"currency", currency:"BRL"});
+const fmtDuration = m => m >= 60 ? `${Math.floor(m/60)}h${m%60 ? String(m%60).padStart(2,"0") : ""}` : `${m} min`;
+const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;", "'":"&#39;"}[c]));
+function chosen(){ return [...document.querySelectorAll('.service input:checked')].map(x => catalog.find(s => s.id === x.value)).filter(Boolean); }
+function totalDuration(){ return chosen().reduce((n,s)=>n+Number(s.duration_minutes||0),0); }
+function serviceCurrentPrice(s){return s&&s.is_promo&&s.promo_price!==null&&Number(s.promo_price)<Number(s.price)?Number(s.promo_price):Number(s?.price||0);}
+function totalPrice(){ return chosen().reduce((n,s)=>n+serviceCurrentPrice(s),0); }
+function showMsg(id, message, error=false){ $(id).innerHTML = `<div class="status" style="${error?'border-color:#c66;color:#a33':''}">${message}</div>`; }
+function localToday(){ return saoPauloNow().date; }
+function saoPauloNow(){ const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()); const v={}; parts.forEach(p=>{if(p.type!=='literal')v[p.type]=p.value;}); return {date:`${v.year}-${v.month}-${v.day}`,minutes:Number(v.hour)*60+Number(v.minute)}; }
+function isPastSlot(date,time){const now=saoPauloNow();if(date<now.date)return true;if(date>now.date)return false;const t=normalizeTime(time).split(':');return Number(t[0])*60+Number(t[1])<=now.minutes;}
+async function loadServices(){
+  const {data,error}=await db.from('services').select('id,name,description,price,promo_price,is_promo,duration_minutes').eq('active',true).order('created_at');
+  if(error) throw error;
+  catalog=data||[];
+  $('services').innerHTML=catalog.map(s=>{const promo=!!s.is_promo&&s.promo_price!==null&&Number(s.promo_price)<Number(s.price);return `<label class="service"><input type="checkbox" value="${s.id}"><span class="name">${esc(s.name)}${promo?'<span class="promo-tag">EM PROMOÇÃO</span>':''}<small>${fmtDuration(Number(s.duration_minutes||0))}</small></span><span class="price">${promo?`<del>${money(s.price)}</del><span class="promo-price">${money(s.promo_price)}</span>`:money(s.price)}</span></label>`;}).join('') || '<div class="empty">Nenhum procedimento disponível no momento.</div>';
+  $('services').onchange=()=>{ $('total').textContent=money(totalPrice()); $('duration').textContent=fmtDuration(totalDuration()); renderSlots(); };
+}
+function normalizeTime(t){ return String(t||'').slice(0,5); }
+function formatClock(t){return t?normalizeTime(t).replace(':','h'):'';}
+function updateScheduleHint(){
+  const el=$('scheduleHint');if(!el)return;
+  const cfg=publicSchedule;
+  if(!cfg){el.textContent='Consulte os horários disponíveis para a data escolhida.';return;}
+  const open=formatClock(cfg.opening_time||'08:00'),close=formatClock(cfg.closing_time||'18:00');
+  const lunch=cfg.break_start&&cfg.break_end?` Intervalo de almoço: ${formatClock(cfg.break_start)} às ${formatClock(cfg.break_end)}.`:' Sem intervalo de almoço.';
+  el.textContent=`Atendimento todos os dias, das ${open} às ${close}.${lunch}`;
+}
+async function loadPublicSchedule(){
+  const {data,error}=await db.rpc('get_public_studio_schedule');
+  if(error){console.warn('Não foi possível carregar os horários gerais do estúdio:',error);return;}
+  publicSchedule=data?.[0]||data||null;updateScheduleHint();
+}
+function toggleLunchFields(){
+  const enabled=$('lunchEnabled').checked;
+  $('lunchStart').disabled=!enabled;$('lunchEnd').disabled=!enabled;
+  $('lunchTimes').classList.toggle('disabled',!enabled);
+}
+$('lunchEnabled').addEventListener('change',toggleLunchFields);
+
+async function renderSlots(){
+  const date=$('date').value, ids=chosen().map(s=>s.id); selectedTime=null; $('slots').innerHTML='';
+  if(!date){ $('slots').innerHTML='<div class="empty" style="grid-column:1/-1">Escolha uma data para ver os horários.</div>'; return; }
+  if(!ids.length){ $('slots').innerHTML='<div class="empty" style="grid-column:1/-1">Selecione pelo menos um procedimento primeiro.</div>'; return; }
+  $('slots').innerHTML='<div class="empty" style="grid-column:1/-1">Buscando horários disponíveis...</div>';
+  const {data,error}=await db.rpc('get_available_slots',{p_date:date,p_service_ids:ids});
+  if(error){ $('slots').innerHTML='<div class="empty" style="grid-column:1/-1">Não foi possível carregar os horários. Tente novamente.</div>'; console.error(error); return; }
+  $('slots').innerHTML='';
+  const slots=(data||[]).filter(slot=>!isPastSlot(date,slot.start_time));
+  if(!slots.length){ const msg=date===saoPauloNow().date?'Não há mais horários disponíveis para esta data. Escolha outro dia.':'Não há horários disponíveis nesta data. Escolha outro dia.'; $('slots').innerHTML=`<div class="empty" style="grid-column:1/-1">${msg}</div>`; return; }
+  slots.forEach(slot=>{ const time=normalizeTime(slot.start_time); const btn=document.createElement('button'); btn.className='slot'; btn.textContent=time; btn.onclick=()=>{document.querySelectorAll('.slot').forEach(x=>x.classList.remove('selected'));btn.classList.add('selected');selectedTime=time;}; $('slots').append(btn); });
+}
+function switchTab(tab){ document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===tab)); $('booking').classList.toggle('hidden',tab!=='booking'); $('admin').classList.toggle('hidden',tab!=='admin'); if(tab==='admin') refreshAdminSession(); }
+document.querySelectorAll('.tab').forEach(x=>x.onclick=()=>switchTab(x.dataset.tab));
+$('date').min=localToday(); $('date').addEventListener('change',renderSlots);
+const insta=$('insta'); if(insta) insta.onclick=()=>window.open('https://www.instagram.com/thalialages_nails/','_blank');
+$('request').onclick=async()=>{
+  const services=chosen(),date=$('date').value,name=$('customer').value.trim(),phone=$('phone').value.trim();
+  if(!services.length){showMsg('bookingMsg','Selecione pelo menos um procedimento.',true);return;}
+  if(!date||!selectedTime){showMsg('bookingMsg','Escolha uma data e um horário disponível.',true);return;}
+  if(isPastSlot(date,selectedTime)){selectedTime=null;showMsg('bookingMsg','Esse horário já passou. Escolha outro horário disponível.',true);await renderSlots();return;}
+  if(!name||!phone){showMsg('bookingMsg','Informe seu nome e WhatsApp.',true);return;}
+  const btn=$('request'); btn.disabled=true; btn.textContent='Enviando solicitação...';
+  try{
+    const {data,error}=await db.rpc('create_booking',{p_customer_name:name,p_customer_phone:phone,p_booking_date:date,p_start_time:selectedTime,p_service_ids:services.map(s=>s.id)});
+    if(error) throw error;
+    const pixPayload='00020101021126330014br.gov.bcb.pix0111635388983675204000053039865802BR5921THALIA DA SILVA LAGES6007BACABAL62070503***6304BF60';
+    const requestedName=name, requestedPhone=phone, requestedDate=date, requestedTime=selectedTime;
+    showMsg('bookingMsg', `<div class="payment-confirmation" style="text-align:center;padding:16px 12px;background:#fffafc;border:1px solid #ead9e5;border-radius:16px;color:#51364b">
+      <div style="font-size:30px;margin-bottom:6px">♡</div><h3 style="margin:0 0 8px;color:#68435f">Solicitação enviada!</h3>
+      <p style="margin:0 0 12px;line-height:1.55">Seu horário está <b>aguardando a confirmação da Thalia</b>. Para garantir a reserva, faça o pagamento do sinal de <b>R$ 10,00</b> via Pix.</p>
+      <div style="display:inline-block;background:white;padding:12px;border-radius:12px;border:1px solid #eee"><div id="pixQr" aria-label="QR Code Pix"></div></div>
+      <p style="font-size:13px;margin:10px 0 4px"><b>Valor do sinal: R$ 10,00</b></p>
+      <p style="font-size:12px;line-height:1.5;margin:0 0 10px;color:#755f70">No aplicativo do banco, confira o nome THALIA DA SILVA LAGES e informe R$ 10,00. O QR Code é Pix copia e cola e não fixa o valor.</p>
+      <button type="button" id="copyPixBtn" class="primary" style="width:100%;margin:5px 0 8px">Copiar código Pix</button>
+      <div id="pixCopyMsg" style="font-size:12px;margin:4px 0 10px"></div>
+      <a id="sendReceiptWhatsapp" class="primary" href="#" target="_blank" rel="noopener" style="display:block;text-decoration:none;width:100%;margin:5px 0 10px;background:#287a50">Enviar comprovante pelo WhatsApp</a>
+      <p style="font-size:12px;line-height:1.5;margin:0;color:#755f70">Após fazer o Pix, toque no botão acima, anexe o comprovante e envie para a Thalia. Ela vai conferir o recebimento e confirmar seu horário. A reserva fica retida por até 30 minutos enquanto aguarda aprovação.</p>
+      <p style="font-size:11px;margin:10px 0 0;color:#927e8e">${esc(requestedName)} · ${requestedDate.split('-').reverse().join('/')} às ${requestedTime}</p>
+    </div>`);
+    if(window.QRCode){new QRCode(document.getElementById('pixQr'),{text:pixPayload,width:190,height:190,colorDark:'#241b22',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});}
+    else {document.getElementById('pixQr').innerHTML='<p style="font-size:12px">QR Code indisponível. Use o botão para copiar o Pix.</p>';}
+    document.getElementById('copyPixBtn').onclick=async()=>{try{await navigator.clipboard.writeText(pixPayload);document.getElementById('pixCopyMsg').textContent='Código Pix copiado!';}catch(e){document.getElementById('pixCopyMsg').textContent='Não foi possível copiar automaticamente. Selecione e copie o código Pix: '+pixPayload;}};
+    const serviceNames=services.map(s=>s.name).join(', ');
+    const whatsappMessage=`Olá, Thalia! Fiz o Pix do sinal de R$ 10,00 para meu agendamento.\n\nNome: ${requestedName}\nWhatsApp: ${requestedPhone}\nServiço(s): ${serviceNames}\nData: ${requestedDate.split('-').reverse().join('/')}\nHorário: ${requestedTime}\nValor do sinal: R$ 10,00\n\nSegue o comprovante:`;
+    document.getElementById('sendReceiptWhatsapp').href='https://wa.me/5599984662730?text='+encodeURIComponent(whatsappMessage);
+    document.querySelectorAll('.service input').forEach(x=>x.checked=false); $('customer').value=''; $('phone').value=''; $('total').textContent=money(0); $('duration').textContent='0 min'; selectedTime=null; await renderSlots();
+  }catch(e){ console.error(e); const msg=(e.message||'').toLowerCase().includes('horário')?'Esse horário acabou de ficar indisponível. Escolha outro, por favor.':'Não foi possível enviar sua solicitação. Confira os dados e tente novamente.'; showMsg('bookingMsg',msg,true); await renderSlots(); }
+  finally{btn.disabled=false;btn.textContent='Solicitar agendamento';}
+};
+async function refreshAdminSession(){
+  const {data}=await db.auth.getSession(); adminSession=data.session;
+  $('loginCard').classList.toggle('hidden',!!adminSession); $('agendaCard').classList.toggle('hidden',!adminSession);
+  if(adminSession){ await loadAdminSettings(); await renderServiceAdmin(); await renderAdmin(); }
+}
+$('loginBtn').onclick=async()=>{
+  const email=$('adminEmail').value.trim(),password=$('adminPassword').value;
+  if(!email||!password){showMsg('loginMsg','Informe seu e-mail e sua senha.',true);return;}
+  const btn=$('loginBtn');btn.disabled=true;btn.textContent='Entrando...';
+  const {data,error}=await db.auth.signInWithPassword({email,password});
+  btn.disabled=false;btn.textContent='Entrar no painel';
+  if(error){showMsg('loginMsg','Não foi possível entrar. Confira o e-mail e a senha.',true);return;}
+  adminSession=data.session; $('adminPassword').value=''; $('loginCard').classList.add('hidden'); $('agendaCard').classList.remove('hidden'); setAdminView('agenda'); await loadAdminSettings(); await renderAdmin();
+};
+$('logoutBtn').onclick=async()=>{await db.auth.signOut();adminSession=null;$('agendaCard').classList.add('hidden');$('loginCard').classList.remove('hidden');};
+$('refreshAdmin').onclick=async()=>{const btn=$('refreshAdmin');btn.disabled=true;try{await loadAdminSettings();await renderServiceAdmin();await renderAdmin();await loadPublicSchedule();await renderSlots();}finally{btn.disabled=false;}};
+async function loadAdminSettings(){
+  const [{data:intervalData,error:intervalError},{data:studioData,error:studioError}]=await Promise.all([
+    db.from('booking_settings').select('interval_minutes').eq('id',true).maybeSingle(),
+    db.from('studio_settings').select('opening_time,closing_time,break_start,break_end').eq('id',true).maybeSingle()
+  ]);
+  if(intervalError||studioError){showMsg('settingsMsg','Não foi possível carregar todas as configurações. Execute o novo SQL de atualização enviado junto com este arquivo.',true);console.error(intervalError||studioError);return;}
+  $('intervalMinutes').value=String(intervalData?.interval_minutes ?? 0);
+  $('openingTime').value=normalizeTime(studioData?.opening_time||'08:00');
+  $('closingTime').value=normalizeTime(studioData?.closing_time||'18:00');
+  const hasLunch=!!(studioData?.break_start&&studioData?.break_end);
+  $('lunchEnabled').checked=hasLunch;
+  $('lunchStart').value=normalizeTime(studioData?.break_start||'12:00');
+  $('lunchEnd').value=normalizeTime(studioData?.break_end||'14:00');
+  toggleLunchFields();
+}
+$('saveSettings').onclick=async()=>{
+  const interval=Number($('intervalMinutes').value);
+  const openingTime=$('openingTime').value,closingTime=$('closingTime').value;
+  const lunchEnabled=$('lunchEnabled').checked;
+  const lunchStart=$('lunchStart').value,lunchEnd=$('lunchEnd').value;
+  if(!openingTime||!closingTime||openingTime>=closingTime){showMsg('settingsMsg','Confira o expediente: o fechamento precisa ser depois da abertura.',true);return;}
+  if(lunchEnabled&& (lunchStart<openingTime||lunchEnd>closingTime)){showMsg('settingsMsg','O intervalo de almoço precisa ficar dentro do horário de funcionamento.',true);return;}
+  if(!Number.isInteger(interval)||interval<0||interval>120){showMsg('settingsMsg','Escolha um intervalo válido.',true);return;}
+  if(lunchEnabled&&(!lunchStart||!lunchEnd||lunchStart>=lunchEnd)){showMsg('settingsMsg','Confira os horários: o fim do almoço precisa ser depois do início.',true);return;}
+  const btn=$('saveSettings');btn.disabled=true;btn.textContent='Salvando...';
+  const {error:intervalError}=await db.from('booking_settings').upsert({id:true,interval_minutes:interval},{onConflict:'id'});
+  if(intervalError){btn.disabled=false;btn.textContent='Salvar configurações';showMsg('settingsMsg','Não foi possível salvar o intervalo entre atendimentos.',true);console.error(intervalError);return;}
+  const breakSettings={opening_time:openingTime,closing_time:closingTime,break_start:lunchEnabled?lunchStart:null,break_end:lunchEnabled?lunchEnd:null};
+  const {data:studioUpdated,error:studioError}=await db.from('studio_settings').update(breakSettings).eq('id',true).select('id').maybeSingle();
+  btn.disabled=false;btn.textContent='Salvar configurações';
+  if(studioError||!studioUpdated){showMsg('settingsMsg','O intervalo entre atendimentos foi salvo, mas não foi possível atualizar o almoço. Confira o SQL e as permissões da tabela studio_settings.',true);console.error(studioError);return;}
+  await loadPublicSchedule();
+  const workMessage=`Funcionamento das ${formatClock(openingTime)} às ${formatClock(closingTime)}.`;
+  const lunchMessage=lunchEnabled?`Almoço das ${formatClock(lunchStart)} às ${formatClock(lunchEnd)}.`:'Sem intervalo de almoço.';
+  showMsg('settingsMsg',`${workMessage} ${interval===0?'Sem intervalo entre atendimentos.':`Intervalo de ${interval} minutos entre atendimentos.`} ${lunchMessage} Configurações salvas!`);
+  await renderSlots();
+};
+function clearServiceForm(){ $('serviceForm').reset();$('serviceId').value='';$('saveService').textContent='Salvar procedimento'; }
+$('cancelServiceEdit').onclick=clearServiceForm;
+window.editService=(id)=>{const item=adminServices.find(x=>x.id===id);if(!item)return;$('serviceId').value=item.id;$('serviceName').value=item.name||'';$('servicePrice').value=Number(item.price||0);$('serviceDuration').value=Number(item.duration_minutes||60);$('serviceDescription').value=item.description||'';$('servicePromo').checked=!!item.is_promo;$('servicePromoPrice').value=item.promo_price??'';$('saveService').textContent='Atualizar procedimento';$('serviceForm').scrollIntoView({behavior:'smooth',block:'center'});};
+window.deleteService=async(id)=>{
+  const item=adminServices.find(x=>x.id===id);if(!item)return;
+  if(!confirm(`Excluir o procedimento "${item.name}"? Esta ação não pode ser desfeita. Se ele já estiver vinculado a agendamentos antigos, o banco poderá impedir a exclusão; nesse caso, use Desativar para retirá-lo da lista de clientes.`))return;
+  const {error}=await db.from('services').delete().eq('id',id);
+  if(error){alert('Não foi possível excluir este procedimento. Ele pode estar vinculado a agendamentos anteriores. Para preservar o histórico, desative-o em vez de excluir.');console.error(error);return;}
+  if($('serviceId').value===id)clearServiceForm();
+  await loadServices();await renderServiceAdmin();
+};
+window.toggleService=async(id,active)=>{const {error}=await db.from('services').update({active}).eq('id',id);if(error){alert('Não foi possível atualizar o procedimento. Verifique as permissões de administrador no Supabase.');console.error(error);return;}await loadServices();await renderServiceAdmin();};
+$('serviceForm').onsubmit=async(e)=>{
+  e.preventDefault();const id=$('serviceId').value;const oldItem=adminServices.find(x=>x.id===id);const payload={name:$('serviceName').value.trim(),price:Number($('servicePrice').value),duration_minutes:Number($('serviceDuration').value),description:$('serviceDescription').value.trim()||null,is_promo:$('servicePromo').checked,promo_price:$('servicePromo').checked?Number($('servicePromoPrice').value):null,active:oldItem?oldItem.active:true};
+  if(payload.is_promo&&(!Number.isFinite(payload.promo_price)||payload.promo_price<0||payload.promo_price>=payload.price)){showMsg('serviceMsg','Informe um preço promocional menor que o preço normal.',true);return;}
+  if(!payload.name||!Number.isFinite(payload.price)||payload.price<0||!Number.isInteger(payload.duration_minutes)||payload.duration_minutes<15){showMsg('serviceMsg','Confira o nome, o valor e a duração (mínimo de 15 minutos).',true);return;}
+  const btn=$('saveService');btn.disabled=true;btn.textContent='Salvando...';
+  const result=id?await db.from('services').update(payload).eq('id',id):await db.from('services').insert(payload);
+  btn.disabled=false;btn.textContent=id?'Atualizar procedimento':'Salvar procedimento';
+  if(result.error){showMsg('serviceMsg','Não foi possível salvar. Confira as permissões da tabela services no Supabase.',true);console.error(result.error);return;}
+  clearServiceForm();showMsg('serviceMsg','Procedimento salvo com sucesso.');await loadServices();await renderServiceAdmin();
+};
+async function renderServiceAdmin(){
+  const {data,error}=await db.from('services').select('id,name,description,price,promo_price,is_promo,duration_minutes,active').order('created_at');
+  if(error){$('serviceAdminList').innerHTML='<div class="empty">Não foi possível carregar os procedimentos.</div>';console.error(error);return;}
+  const items=data||[];adminServices=items;
+  $('serviceAdminList').innerHTML=items.map(x=>`<div class="service-admin ${x.active?'':'muted'}"><div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div><b>${esc(x.name)}</b><div class="note">${x.is_promo&&x.promo_price!==null?`<del>${money(x.price)}</del> <span class="promo-price">${money(x.promo_price)}</span> <span class="promo-tag">PROMOÇÃO</span>`:money(x.price)} · ${fmtDuration(Number(x.duration_minutes||0))}${x.description?' · '+esc(x.description):''}</div><span class="pill ${x.active?'ok':'no'}">${x.active?'Ativo':'Desativado'}</span></div></div><div class="actions"><button class="approve" onclick="editService('${x.id}')">Editar</button><button class="${x.active?'secondary':'approve'}" onclick="toggleService('${x.id}',${!x.active})">${x.active?'Desativar':'Ativar'}</button><button class="danger" onclick="deleteService('${x.id}')">Excluir</button></div></div>`).join('')||'<div class="empty">Nenhum procedimento cadastrado.</div>';
+}
+function statusLabel(s){return ({pending:'Pendente',confirmed:'Confirmado',completed:'Concluído',cancelled:'Recusado',expired:'Expirado'})[s]||s;}
+let adminView='agenda';
+function setAdminView(view){
+  adminView=view;
+  document.querySelectorAll('[data-admin-view]').forEach(btn=>btn.classList.toggle('active',btn.dataset.adminView===view));
+  $('adminViewAgenda').classList.toggle('hidden',view!=='agenda');
+  $('adminViewServices').classList.toggle('hidden',view!=='services');
+  $('adminViewSettings').classList.toggle('hidden',view!=='settings');
+  $('adminViewHistory').classList.toggle('hidden',view!=='history');
+  if(view==='services') renderServiceAdmin();
+  if(view==='agenda'||view==='history') renderAdmin();
+}
+document.querySelectorAll('[data-admin-view]').forEach(btn=>btn.addEventListener('click',()=>setAdminView(btn.dataset.adminView)));
+$('historyDate').addEventListener('change',renderAdmin);
+$('clearHistoryDate').addEventListener('click',()=>{$('historyDate').value='';renderAdmin();});
+
+async function renderAdmin(){
+  const {data,error}=await db.from('bookings').select('id,customer_name,customer_phone,booking_date,start_time,end_time,total_price,total_duration,status,signal_paid,no_show,hold_expires_at,booking_services(service_name,service_price,service_duration)').order('booking_date').order('start_time');
+  if(error){showMsg('appointments','Não foi possível carregar a agenda. Verifique se este usuário tem acesso de administrador.',true);console.error(error);return;}
+  const all=data||[], today=localToday(), selectedDate=$('historyDate')?.value||'';
+  const isHistory=b=>b.status==='completed'||b.status==='cancelled'||b.status==='expired'||b.no_show||String(b.booking_date)<today;
+  const agenda=all.filter(b=>!isHistory(b)&&String(b.booking_date)>=today);
+  let history=all.filter(isHistory);
+  if(selectedDate) history=history.filter(b=>String(b.booking_date)===selectedDate);
+  const renderCards=(items,target,empty)=>{
+    if(!items.length){$(target).innerHTML=`<div class="empty">${empty}</div>`;return;}
+    $(target).innerHTML=items.map(b=>{
+      const services=(b.booking_services||[]).map(x=>esc(x.service_name)).join(', ');
+      const date=String(b.booking_date).split('-').reverse().join('/');
+      const time=normalizeTime(b.start_time);
+      const expiry=b.status==='pending'&&b.hold_expires_at?`<br><small>Reserva até ${new Date(b.hold_expires_at).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</small>`:'';
+      const paymentBadge=b.signal_paid?'<span class="pill ok">Sinal pago ✓</span>':'<span class="pill no">Aguardando Pix</span>';
+      const rawPhone=String(b.customer_phone||'').replace(/\D/g,'');
+      const phoneDigits=rawPhone?(rawPhone.startsWith('55')?rawPhone:`55${rawPhone}`):'';
+      const serviceNames=(b.booking_services||[]).map(x=>x.service_name).join(', ')||'seu procedimento';
+      const waMessage=b.status==='confirmed'
+        ? `Oi, ${b.customer_name}! Passando para lembrar do seu horário em ${date}, às ${time}. Procedimento: ${serviceNames}. Podemos confirmar sua presença?`
+        : `Oi, ${b.customer_name}! Seu agendamento solicitado para ${date}, às ${time}, aguarda a confirmação do sinal de R$ 10,00. Quando fizer o Pix, envie o comprovante por aqui.`;
+      const waText=encodeURIComponent(waMessage);
+      const whatsappLabel=b.status==='confirmed'?'Enviar lembrete':'Pedir comprovante';
+      const whatsappLink=phoneDigits&&(b.status==='pending'||b.status==='confirmed')?`<a class="whatsapp-link" href="https://wa.me/${phoneDigits}?text=${waText}" target="_blank" rel="noopener">${whatsappLabel}</a>`:'';
+      const badge=b.no_show?'<span class="pill no">Não compareceu</span>':`<span class="pill ${b.status==='confirmed'?'ok':b.status==='cancelled'||b.status==='expired'?'no':''}">${statusLabel(b.status)}</span>`;
+      const actions=`${b.status==='pending'?`<button class="approve" onclick="setBookingStatus('${b.id}','confirmed')">Aprovar</button><button class="reject" onclick="setBookingStatus('${b.id}','cancelled')">Recusar</button>`:''}${b.status==='confirmed'&&!b.no_show?`<button class="approve" onclick="setBookingStatus('${b.id}','completed')">Finalizar atendimento</button><button class="reject" onclick="setNoShow('${b.id}',true)">Cliente não compareceu</button>`:''}${b.status==='confirmed'&&b.no_show?`<button class="reject" onclick="setNoShow('${b.id}',false)">Desmarcar falta</button>`:''}${b.status==='pending'||b.status==='confirmed'?`<button class="${b.signal_paid?'secondary':'approve'}" onclick="setSignalPaid('${b.id}',${!b.signal_paid})">${b.signal_paid?'Desmarcar sinal pago':'Sinal pago'}</button>`:''}${whatsappLink}<button class="reject" onclick="deleteBooking('${b.id}')">Excluir agendamento</button>`;
+      return `<article class="appointment"><div class="appt-head"><b>${esc(b.customer_name)}</b>${badge}</div><p style="font-size:12px;line-height:1.55;color:var(--muted);margin:8px 0">${date} às ${time} · ${fmtDuration(Number(b.total_duration||0))}${expiry}<br>${services}<br><b style="color:var(--plum)">${money(b.total_price)}</b><br>${esc(b.customer_phone)}<br><b>Sinal de R$ 10,00:</b> ${paymentBadge}</p><div class="actions">${actions}</div></article>`;
+    }).join('');
+  };
+  if(adminView==='agenda'){
+    $('stats').innerHTML=[['Pendentes',agenda.filter(x=>x.status==='pending').length],['Confirmados',agenda.filter(x=>x.status==='confirmed').length],['Sinais pagos',agenda.filter(x=>x.signal_paid).length]].map(([k,v])=>`<span class="pill">${k}: ${v}</span>`).join('');
+    renderCards(agenda,'appointments','Nenhum agendamento para hoje ou para os próximos dias.');
+  }else if(adminView==='history'){
+    $('historyStats').innerHTML=[['Registros',history.length],['Concluídos',history.filter(x=>x.status==='completed').length],['Cancelados',history.filter(x=>x.status==='cancelled').length],['Faltas',history.filter(x=>x.no_show).length]].map(([k,v])=>`<span class="pill">${k}: ${v}</span>`).join('');
+    renderCards(history,'historyAppointments','Nenhum registro encontrado no histórico para esse filtro.');
+  }
+}
+window.setSignalPaid=async(id,paid)=>{
+  // Abre a nova aba durante o clique para evitar bloqueio de pop-up pelo navegador.
+  const whatsappWindow=paid?window.open('about:blank','_blank'):null;
+  const updateData=paid?{signal_paid:true,status:'confirmed'}:{signal_paid:false};
+  const {data:booking,error}=await db.from('bookings')
+    .update(updateData)
+    .eq('id',id)
+    .select('customer_name,customer_phone,booking_date,start_time')
+    .single();
+  if(error){
+    if(whatsappWindow) whatsappWindow.close();
+    alert('Não foi possível atualizar o pagamento. Confira a conexão e as permissões no Supabase.');
+    console.error(error);
+    return;
+  }
+  if(paid){
+    const {data:services,error:servicesError}=await db.from('booking_services')
+      .select('service_name').eq('booking_id',id);
+    if(servicesError) console.error('Não foi possível carregar os procedimentos da confirmação:',servicesError);
+    const date=String(booking.booking_date).split('-').reverse().join('/');
+    const time=normalizeTime(booking.start_time);
+    const serviceNames=(services||[]).map(item=>item.service_name).join(', ')||'seu procedimento';
+    const message=`Olá, ${booking.customer_name}! Seu Pix foi recebido e seu horário está confirmado!\n\nData: ${date}\nHorário: ${time}\nProcedimento: ${serviceNames}\n\nTudo certinho! Te espero no dia.`;
+    const phone=String(booking.customer_phone||'').replace(/\D/g,'');
+    if(phone){
+      const phoneDigits=phone.startsWith('55')?phone:`55${phone}`;
+      const whatsappUrl=`https://wa.me/${phoneDigits}?text=${encodeURIComponent(message)}`;
+      if(whatsappWindow) whatsappWindow.location.href=whatsappUrl;
+      else window.location.href=whatsappUrl;
+    }else if(whatsappWindow){
+      whatsappWindow.close();
+      alert('Sinal marcado como pago, mas a cliente não possui WhatsApp cadastrado.');
+    }
+  }
+  await renderAdmin();
+  await renderSlots();
+};
+window.setBookingStatus=async(id,status)=>{
+  const {error}=await db.from('bookings').update({status}).eq('id',id);
+  if(error){alert('Não foi possível atualizar o agendamento.');console.error(error);return;}
+  await renderAdmin(); await renderSlots();
+};
+window.setNoShow=async(id,noShow)=>{
+  const message=noShow?'Marcar este cliente como não compareceu?':'Remover a marcação de falta?';
+  if(!confirm(message)) return;
+  const {error}=await db.from('bookings').update({no_show:noShow}).eq('id',id);
+  if(error){alert('Não foi possível atualizar. Confira se executou o SQL que adiciona a coluna no_show.');console.error(error);return;}
+  await renderAdmin();
+};
+window.deleteBooking=async(id)=>{
+  if(!confirm('Tem certeza que deseja excluir este agendamento? Essa ação não poderá ser desfeita.')) return;
+  try{
+    // Exclui primeiro os serviços vinculados e confirma o retorno do Supabase.
+    const child=await db.from('booking_services').delete().eq('booking_id',id).select('booking_id');
+    if(child.error){console.error('Erro ao excluir booking_services:',child.error);alert('Não foi possível excluir os serviços vinculados. Confira a sessão de administradora e as permissões no Supabase.');return;}
+
+    // O select() é importante: sem ele, o Supabase pode retornar sucesso mesmo sem apagar nenhuma linha por causa do RLS.
+    const removed=await db.from('bookings').delete().eq('id',id).select('id');
+    if(removed.error){console.error('Erro ao excluir booking:',removed.error);alert('Não foi possível excluir o agendamento: '+(removed.error.message||'erro no Supabase'));return;}
+    if(!removed.data || removed.data.length===0){
+      alert('O Supabase não confirmou a exclusão. O agendamento continua salvo. Verifique se a Thalia está conectada como administradora e tente novamente.');
+      return;
+    }
+    alert('Agendamento excluído definitivamente do Supabase.');
+    await renderAdmin();
+    await renderSlots();
+  }catch(error){
+    console.error('Falha inesperada ao excluir agendamento:',error);
+    alert('Ocorreu um erro ao excluir. O agendamento não foi confirmado como removido.');
+  }
+};
+(async()=>{
+  try{await loadServices(); await loadPublicSchedule(); await renderSlots(); await refreshAdminSession();}
+  catch(e){console.error(e);$('services').innerHTML='<div class="empty">Não foi possível carregar os procedimentos. Verifique a conexão com o Supabase.</div>';}
+})();
+</script></body></html>
