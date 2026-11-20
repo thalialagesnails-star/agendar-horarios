@@ -187,6 +187,7 @@ $('request').onclick=async()=>{
     const serviceNames=services.map(s=>s.name).join(', ');
     const whatsappMessage=`Olá, Thalia! Fiz o Pix do sinal de R$ 10,00 para meu agendamento.\n\nNome: ${requestedName}\nWhatsApp: ${requestedPhone}\nServiço(s): ${serviceNames}\nData: ${requestedDate.split('-').reverse().join('/')}\nHorário: ${requestedTime}\nValor do sinal: R$ 10,00\n\nSegue o comprovante:`;
     document.getElementById('sendReceiptWhatsapp').href='https://wa.me/5599984662730?text='+encodeURIComponent(whatsappMessage);
+    setTimeout(()=>document.getElementById('pixQr')?.scrollIntoView({behavior:'smooth',block:'center'}),150);
     document.querySelectorAll('.service input').forEach(x=>x.checked=false); $('customer').value=''; $('phone').value=''; $('total').textContent=money(0); $('duration').textContent='0 min'; selectedTime=null; await renderSlots();
   }catch(e){ console.error(e); const msg=(e.message||'').toLowerCase().includes('horário')?'Esse horário acabou de ficar indisponível. Escolha outro, por favor.':'Não foi possível enviar sua solicitação. Confira os dados e tente novamente.'; showMsg('bookingMsg',msg,true); await renderSlots(); }
   finally{btn.disabled=false;btn.textContent='Solicitar agendamento';}
